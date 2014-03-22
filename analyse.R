@@ -12,7 +12,7 @@ overall.plot <- ggplot(data, aes(x=Income, y=Satisfaction)) +
   scale_x_continuous(labels = comma)
 
 
-ggsave(plot=overall.plot, filename="overall_plot.svg", width = 10 , height = 7)
+ggsave(plot=overall.plot, filename="plots/overall_plot.svg", width = 10 , height = 7)
 
 
 data$Predicted <- predict(lm(Satisfaction~poly(Income,2), data=data))
@@ -23,6 +23,6 @@ difference.plot <- ggplot(data, aes(y=Difference, x=Income)) +
   geom_hline(yintercept = 0) + 
   scale_x_continuous(labels = comma)
 
-ggsave(plot = difference.plot, filename = "difference_plot.svg", width = 10, height = 7)
+ggsave(plot = difference.plot, filename = "plots/difference_plot.svg", width = 10, height = 7)
 
 write.csv(data, "plot_data.csv", row.names = F)
