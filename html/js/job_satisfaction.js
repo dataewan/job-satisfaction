@@ -338,7 +338,7 @@
 
   })(AxesChart);
 
-  d3.csv("data/plot_data.csv").get((function(_this) {
+  d3.csv("/data/plot_data.csv").get((function(_this) {
     return function(error, data) {
       var corrected, hline, pointsize, unmodified, xvals, yvals, yvar;
       _this.data = data;

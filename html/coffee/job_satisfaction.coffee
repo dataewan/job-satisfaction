@@ -58,7 +58,7 @@ class JobSatisfactionPlot extends AxesChart
         @_label.text(d.Occupation)
 #@data
 
-d3.csv("data/plot_data.csv")
+d3.csv("/data/plot_data.csv")
     .get((error, data) => 
         @data = data
         xvals = _.map(_.pluck(data, "Income"), (i) => +i)
