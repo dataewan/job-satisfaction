@@ -25,4 +25,6 @@ difference.plot <- ggplot(data, aes(y=Difference, x=Income)) +
 
 ggsave(plot = difference.plot, filename = "plots/difference_plot.svg", width = 10, height = 7)
 
+data$id <- paste("_", row.names(data), sep="")
+
 write.csv(data, "plot_data.csv", row.names = F)

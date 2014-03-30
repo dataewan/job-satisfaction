@@ -1,2 +1,2 @@
 analysis:
-	R < analyse.R
+	R < analyse.R --no-save
